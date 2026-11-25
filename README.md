@@ -1,25 +1,14 @@
-# APP-013 · İlaç 360 (Medication 360)
+# İlaç Hatırlatıcı · Medicine Reminder
 
-Offline personal medication schedule and intake journal for Android and iOS, built with Flutter. The 400-app bootstrap catalog specifies APP-013 only as `health-medical`; the product name is a **provisional product decision**, not an existing catalog assignment.
+Kendi planın, zamanında hatırlatma · Your own schedule, reminded on time
 
-## Features
-- User-entered medication names, dose labels and multiple daily clock times
-- Start date, optional end date and active/pause status in the data model
-- Today's scheduled doses, manual taken/skipped status, recent log, seven-day adherence
-- Turkish, English and Arabic text, RTL via Flutter locale
-- Local encrypted storage via `flutter_secure_storage`
-- JSON text backup/import with version and validation; permanent data deletion
-- Automated model/repository/widget tests and GitHub Actions workflow
+Sağlık ve Spor ailesinin uygulaması. Çevrimdışı çalışır; telefon, tablet ve web.
+Gerçek uygulama ortak motordadır: [saglik-motoru](https://github.com/taktemurr-ops/saglik-motoru); çatı ve
+reklam/satın alma/gizlilik: [studio-core](https://github.com/taktemurr-ops/studio-core) (`lib/apps`).
+Merkez uygulama: [merkez-saglik-ve-spor](https://github.com/taktemurr-ops/merkez-saglik-ve-spor).
 
-## Safety and limitations
-This is a **manual journal**, not a prescribing, diagnosis or dosage recommendation service. No medical advice or automatic dose changes. No push/local notifications have been implemented. The user must open the app to check their schedule. No cloud sync, caregiver sharing, health platform sync or medical-device certification. Backups displayed as plain JSON contain sensitive health data: treat them as unencrypted after export.
+**Tıbbi cihaz değildir**; teşhis, tedavi ya da doz önermez. Her ekranda esenlik uyarısı görünür. Veriler yalnızca cihazda saklanır.
 
-## Run
-```bash
-flutter pub get
-flutter analyze
-flutter test
-flutter run
-```
-
-Native Android/iOS project scaffolding is generated using `flutter create --platforms=android,ios --project-name ilac360 .` before building. Production signing, app icons, store approvals and real-device tests are not included.
+> Bu depo önceden bağımsız bir uygulamaydı (`app-013`). Sağlık ve Spor çatısına taşındı; eski
+> sürümün kodu git geçmişinde duruyor. Özellikleri motora aktarıldı (kullanıcının reçetesine göre saatler, bugün listesi, alındı/atlandı; doz önerisi yok).
+> GitHub'da depo adı `uyg-ilac-hatirlatici` olarak değiştirilebilir (eski adresler yönlendirilir).
